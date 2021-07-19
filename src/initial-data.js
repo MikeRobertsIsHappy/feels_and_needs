@@ -35,17 +35,17 @@ const initialData = {
   columns: {
     'column-1': {
       id: 'column-1',
-      title: 'Feeling Words',
+      title: 'Possible Feelings',
       taskIds: ['task-1', 	'task-2', 	'task-3', 	'task-4', 	'task-5', 	'task-6', 	'task-7', 	'task-8', 	'task-9', 	'task-10', 	'task-11', 	'task-12', 	'task-13', 	'task-14', 	'task-15', 	'task-16', 	'task-17', 	'task-18', 	'task-19', 	'task-20', 	'task-21', 	'task-22', 	'task-23', 	'task-24', 	'task-25', 	'task-26', 	'task-27', 	'task-28', 	'task-29', 	'task-30', 	'task-31'],
     },
     'column-2': {
       id: 'column-2',
-      title: 'Maybe I feel?',
+      title: 'Maybe I Feel?',
       taskIds: [],
     },
     'column-3': {
       id: 'column-3',
-      title: 'Alive In Me',
+      title: 'I Feel',
       taskIds: [],
     },
   },

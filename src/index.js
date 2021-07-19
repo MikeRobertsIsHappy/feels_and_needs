@@ -102,10 +102,10 @@ class App extends React.Component {
             const tasks = column.taskIds.map(
               taskId => this.state.tasks[taskId],
             );
-            
-            // this where you can set a condtion for dragging, like you can only drag forward.
-            const isDropDisabled = false;
 
+            // this where you can set a condtion for dragging, like you can only drag forward.    const isDropDisabled = index < this.state.homeIndex;
+            const isDropDisabled = false;
+            
             return (
               <Column
                 key={column.id}
