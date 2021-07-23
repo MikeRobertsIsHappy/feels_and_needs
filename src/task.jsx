@@ -6,6 +6,7 @@ const Container = styled.div`
   border: 1px solid lightgrey;
   border-radius: 0px;
   padding: 0px;
+  width : 200px
   margin-bottom: 0px;
   background-color: ${props =>
     props.isDragDisabled
