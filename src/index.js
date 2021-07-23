@@ -92,7 +92,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <DragDropContext
+      <div>
+        <DragDropContext
         onDragStart={this.onDragStart}
         onDragEnd={this.onDragEnd}
       >
@@ -117,6 +118,32 @@ class App extends React.Component {
           })}
         </Container>
       </DragDropContext>
+        <DragDropContext
+          onDragStart={this.onDragStart}
+          onDragEnd={this.onDragEnd}
+        >
+          <Container>
+            {this.state.columnOrder2.map((columnId, index) => {
+              const column = this.state.columns[columnId];
+              const tasks = column.taskIds.map(
+                taskId => this.state.tasks[taskId],
+              );
+
+              // this where you can set a condtion for dragging, like you can only drag forward.    const isDropDisabled = index < this.state.homeIndex;
+              const isDropDisabled = false;
+              
+              return (
+                <Column
+                  key={column.id}
+                  column={column}
+                  tasks={tasks}
+                  isDropDisabled={isDropDisabled}
+                />
+              );
+            })}
+          </Container>
+        </DragDropContext>
+      </div>
     );
   }
 }

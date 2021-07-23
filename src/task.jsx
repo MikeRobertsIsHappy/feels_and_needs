@@ -4,9 +4,9 @@ import { Draggable } from 'react-beautiful-dnd';
 
 const Container = styled.div`
   border: 1px solid lightgrey;
-  border-radius: 1px;
-  padding: 1px;
-  margin-bottom: 1px;
+  border-radius: 0px;
+  padding: 0px;
+  margin-bottom: 0px;
   background-color: ${props =>
     props.isDragDisabled
       ? 'lightgrey'
@@ -33,6 +33,31 @@ export default class Task extends React.Component {
             isDragDisabled={isDragDisabled}
           >
             {this.props.task.content}
+          </Container>
+        )}
+      </Draggable>
+    );
+  }
+}
+
+export class Feel extends React.Component {
+  render() {
+    const isDragDisabled = this.props.feel.id === 'feel-0';
+    return (
+      <Draggable
+        draggableId={this.props.feel.id}
+        index={this.props.index}
+        isDragDisabled={isDragDisabled}
+      >
+        {(provided, snapshot) => (
+          <Container
+            {...provided.draggableProps}
+            {...provided.dragHandleProps}
+            innerRef={provided.innerRef}
+            isDragging={snapshot.isDragging}
+            isDragDisabled={isDragDisabled}
+          >
+            {this.props.feel.content}
           </Container>
         )}
       </Draggable>
